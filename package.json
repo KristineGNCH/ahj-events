@@ -37,7 +37,6 @@
     "live-server": "^1.2.2",
     "mini-css-extract-plugin": "^2.9.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
-    "puppeteer": "^22.13.1",
     "sweetalert": "^2.1.2",
     "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.93.0",
