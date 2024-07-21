@@ -1,5 +1,5 @@
 {
-  "name": "events",
+  "name": "hm",
   "version": "1.0.0",
   "description": "Домашнее задание к занятию 3.Обработка событий",
   "main": "index.js",
@@ -48,5 +48,12 @@
     "node": "^22.5.1",
     "yarn": "^1.22.22"
   },
-  "repository": "git@github.com:KristineGNCH/ahj-events.git"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KristineGNCH/ahj-events.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KristineGNCH/ahj-events/issues"
+  },
+  "homepage": "https://github.com/KristineGNCH/ahj-events#readme"
 }
