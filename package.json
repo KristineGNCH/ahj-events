@@ -45,6 +45,8 @@
   },
   "dependencies": {
     "core-js": "^3.37.1",
-    "node": "^22.5.1"
-  }
+    "node": "^22.5.1",
+    "yarn": "^1.22.22"
+  },
+  "repository": "git@github.com:KristineGNCH/ahj-events.git"
 }
