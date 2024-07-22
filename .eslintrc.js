@@ -9,11 +9,4 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {},
-  "import/no-extraneous-dependencies": [
-    "error",
-    {
-      devDependencies: ["**/*.test.ts", "**/*.test.tsx"],
-    },
-  ],
 };
