@@ -1,7 +1,9 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-plusplus */
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable indent */
-/* eslint-disable linebreak-style */
-import swal from "sweetalert";
+import swal from 'sweetalert';
+
 export default class Game {
   constructor(board, character) {
     this.board = board;
@@ -13,16 +15,16 @@ export default class Game {
     this.missedHit = 0;
     this.win = 5;
     this.lost = 5;
-    this.cells = document.querySelectorAll(".cell");
+    this.cells = document.querySelectorAll('.cell');
     this.listeners = [];
   }
 
   newBoard() {
     this.board = this.board.getBoard(this.boardSize);
-    const body = document.querySelector("body");
-    const container = document.createElement("div");
+    const body = document.querySelector('body');
+    const container = document.createElement('div');
 
-    container.classList.add("container");
+    container.classList.add('container');
     container.innerHTML = "<h1 class ='title'>Статистика</h1>";
     this.statistic = this.statisticContainer();
     container.appendChild(this.statistic);
@@ -56,10 +58,9 @@ export default class Game {
   }
 
   statisticContainer() {
-    this.mainStatisticContainer = document.createElement("div");
-    this.mainStatisticContainer.classList.add("status");
-    this.mainStatisticContainer.innerHTML =
-      'Поймано гоблинов: <span id="win">0</span><br>Пропущено гоблинов: <span id="lost">0</span>';
+    this.mainStatisticContainer = document.createElement('div');
+    this.mainStatisticContainer.classList.add('status');
+    this.mainStatisticContainer.innerHTML = 'Поймано гоблинов: <span id="win">0</span><br>Пропущено гоблинов: <span id="lost">0</span>';
     return this.mainStatisticContainer;
   }
 
@@ -78,20 +79,20 @@ export default class Game {
 
   onBoardClick(e) {
     e.preventDefault();
-    this.goblinHit = document.querySelector("#win");
-    this.missedHit = document.querySelector("#lost");
+    this.goblinHit = document.querySelector('#win');
+    this.missedHit = document.querySelector('#lost');
     this.listeners.forEach((callback) => callback(e.target));
 
-    if (e.target.classList.contains("goblin")) {
+    if (e.target.classList.contains('goblin')) {
       this.goblinHit.textContent++;
-      e.target.classList.remove("goblin");
+      e.target.classList.remove('goblin');
     } else {
       this.missedHit.textContent++;
     }
 
     if (this.goblinHit.textContent >= this.win) {
       swal({
-        title: "Поздравляем, Вы поймали 5 гоблинов",
+        title: 'Поздравляем, Вы поймали 5 гоблинов',
         showClass: {
           popup: `
             animate__animated
@@ -111,8 +112,8 @@ export default class Game {
       this.newGame();
     } else if (this.missedHit.textContent >= this.lost) {
       swal({
-        icon: "error",
-        title: "Увы, Вы проиграли!",
+        icon: 'error',
+        title: 'Увы, Вы проиграли!',
       });
       this.deletedCharacter();
       this.newGame();
@@ -126,7 +127,7 @@ export default class Game {
 
   start() {
     this.newBoard();
-    this.board.addEventListener("click", this.onBoardClick.bind(this));
+    this.board.addEventListener('click', this.onBoardClick.bind(this));
     this.play();
   }
 }
