@@ -46,10 +46,7 @@
   "dependencies": {
     "core-js": "^3.37.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/KristineGNCH/ahj-events.git"
-  },
+  "repository": "git+ssh://git@github.com/KristineGNCH/ahj-events.git",
   "bugs": {
     "url": "https://github.com/KristineGNCH/ahj-events/issues"
   },
