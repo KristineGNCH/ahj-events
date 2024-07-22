@@ -1,5 +1,7 @@
 # Домашнее задание к занятию "3.Обработка событий"
 
+[![Netology AHJ](https://github.com/KristineGNCH/ahj-events/actions/workflows/web.yml/badge.svg)](https://github.com/KristineGNCH/ahj-events/actions/workflows/web.yml)
+
 ### Игра с гоблинами
 
 ![](./pic/GracefulMiniatureBustard-small.gif)
